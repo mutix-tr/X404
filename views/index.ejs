@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Mutix Services</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>pnxng.com</h1>
+            <p>Gizlilik odaklı kamu servisleri.</p>
+        </header>
+
+        <div class="grid-container">
+            <% services.forEach(service => { %>
+                <div class="service-item">
+                    <span class="code"><%= service.code %></span>
+                    <a href="<%= service.url %>" target="_blank"><%= service.name %></a>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>
