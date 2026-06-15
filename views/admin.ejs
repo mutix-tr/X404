@@ -1,0 +1,14 @@
+<h2>Panel</h2>
+<form action="/add" method="POST">
+    <input name="code" placeholder="Harf" required>
+    <input name="name" placeholder="İsim" required>
+    <input name="url" placeholder="URL" required>
+    <button>Ekle</button>
+</form>
+<hr>
+<% services.forEach(s => { %>
+    <div><%= s.code %> - <%= s.name %> 
+    <form action="/delete" method="POST" style="display:inline">
+        <input type="hidden" name="id" value="<%= s.id %>"><button>Sil</button>
+    </form></div>
+<% }); %>
