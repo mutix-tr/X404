@@ -1,5 +1,6 @@
 const express = require('express');
-const db = require('better-sqlite3')('data/database.sqlite');
+const path = require('path');
+const db = require('better-sqlite3')(path.join(__dirname, 'data', 'database.sqlite'));
 const basicAuth = require('express-basic-auth');
 const app = express();
 
